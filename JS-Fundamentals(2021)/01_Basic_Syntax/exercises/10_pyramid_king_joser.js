@@ -1,0 +1,4 @@
+function pyramidJoser(base, increment){
+    
+}
+
