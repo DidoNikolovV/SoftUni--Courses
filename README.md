@@ -1,2 +1,2 @@
 # SoftUni--Courses
-Courses from my education at SoftUni
+This repository holds projects, homework, exexercises and other assets during my education at SoftUni (2021)
