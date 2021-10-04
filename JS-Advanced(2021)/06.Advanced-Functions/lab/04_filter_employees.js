@@ -1,28 +1,24 @@
 function filterEmployees(data, criteria) {
     let parsedData = JSON.parse(data);
     let keys = Object.keys(parsedData);
-    let [crit1, crit2] = criteria.split("-");
-    let counter = 0;
-    if(crit1 == 'all') {
+    let counter = 0; 
+    if(criteria == 'all') {
       for(let k of keys) {
         let currentData = parsedData[k];
         console.log(`${counter}. ${currentData.first_name} ${currentData.last_name} - ${currentData.email}`);
         counter++;
-        }
+      }
     } else {
+      let [crit1, crit2] = criteria.split("-");
       for(let k of keys) {
         let currentData = parsedData[k];
         let matchedCriteria = currentData[crit1] == crit2;
         if(matchedCriteria) {
             console.log(`${counter}. ${currentData.first_name} ${currentData.last_name} - ${currentData.email}`);
             counter++;
-        }
-        
+        }  
     }
-    }
-     
-   
-    
+    }    
 }
 
 filterEmployees(`[{
@@ -45,7 +41,7 @@ filterEmployees(`[{
   "email": "emaldin2@hostgator.com",
   "gender": "Male"
 }]`, 
-'gender-Female'
+'all'
 )
 
 
