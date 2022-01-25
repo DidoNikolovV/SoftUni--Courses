@@ -42,16 +42,15 @@ class SummerCamp {
     }
 
     timeToPlay(typeOfGame, participant1, participant2){
-      
+        let p1Found = this.listOfParticipants.find(p => participant1 == p.name);
+        let p2Found = this.listOfParticipants.find(p => participant2 == p.name);
+
+        if((participant1 && participant2) && (p1Found.condition !== p2Found.condition)) {
+          throw new Error("Choose players with equal condition.");
+        }
 
         if(typeOfGame === "WaterBalloonFights") {
             // return this.playGameWithTwo(typeOfGame, participant1, participant2);
-            let p1Found = this.listOfParticipants.find(p => participant1 == p.name);
-            let p2Found = this.listOfParticipants.find(p => participant2 == p.name);
-    
-            if((participant1 && participant2) && (p1Found.condition !== p2Found.condition)) {
-              throw new Error("Choose players with equal condition.");
-            }
             if(!p1Found || !p2Found){
                throw new Error("Invalid entered name//s.")
             }

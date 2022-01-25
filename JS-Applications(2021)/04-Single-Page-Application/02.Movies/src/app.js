@@ -64,11 +64,12 @@ export function onLogout(e) {
 
 // Order of views:
 // - X catalog (home view)
-// - login
-// - register
+// - X login
+// - X logout
+// - X register
 // - create
-// - details
-// - likes
+// X details
+// X likes
 // - edit
 // - delete
 
