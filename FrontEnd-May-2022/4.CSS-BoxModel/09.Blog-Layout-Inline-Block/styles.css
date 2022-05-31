@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(238, 238, 238);
+    color: rgb(51, 51, 51);
+}
+
+article {
+    width: 60%;
+    float: left;
+    padding-left: 20px;
+}
+
+aside {
+    width: 40%;
+    float: right;
+}
+
+img {
+    max-width: 100%;;
+    width: 600px;
+    height: 450px;
+}
