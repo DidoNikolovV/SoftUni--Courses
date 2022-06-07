@@ -1,0 +1,181 @@
+/* @import url("https://use.fontawesome.com/releases/v5.10.2/css/all.css"); */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 5rem;
+    background-color: rgb(238, 238, 238);
+}
+
+a {
+    color: rgb(0, 102, 0);
+}
+
+img {
+    float: right;
+    padding: 0.7rem;
+    margin: 0 1.5rem;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid #000;
+    box-shadow: rgba(0, 0, 0, 0.25);
+}
+
+.main-header {
+    position: relative;
+}
+
+.header-title {
+    position: absolute;
+    left: 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border-bottom: 3px solid #000;
+    width: 100%;
+}
+
+.navbar {
+    position: absolute;
+    right: 0;
+    bottom: 1px;
+}
+
+.navbar ul li {
+    display: inline-block;
+    padding-left: 2rem;
+}
+
+aside {
+    position: absolute;
+    top: 15%;
+    right: 9%;
+}
+
+aside .aside-nav-categories {
+    margin: 0.5rem 0 1rem 2rem;
+}
+
+aside .aside-nav-categories ul li {
+    padding-bottom: 0.2rem;
+}
+
+aside .aside-nav-categories ul a {
+    text-decoration: none;
+}
+
+aside .aside-nav-social {
+    margin: 0.5rem 0 0 2rem;
+}
+
+aside .aside-nav-social ul li {
+    padding-bottom: 0.2rem;
+}
+
+aside .aside-nav-social ul a {
+    text-decoration: none;
+}
+
+main {
+    position: absolute;
+    width: 60%;
+    padding-top: 4rem;
+}
+
+main .first-article {
+    margin-bottom: 3rem;
+    height: 100%;
+}
+
+main .first-article section p,
+main .second-article section p,
+main .third-article section p
+{
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+main .section-title {
+    font-family: Georgia, serif;
+    font-size: 1em/1.2;
+    margin-bottom: 1rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-auto-rows: minmax(150px, auto);
+    grid-gap: 20px;
+    grid-template-areas: 
+        "header header"
+        "content sidebar"
+        "footer footer";
+}
+
+.grid-item-header {
+    grid-area: header;
+}
+
+.grid-item-content {
+    grid-area: content;
+}
+
+.grid-item-sidebar {
+    grid-area: sidebar;
+}
+
+.grid-item-footer {
+    grid-area: footer;
+}
+
+
+
+
+.grid-item-sidebar {
+    position: relative;
+    font-family: Georgia, serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: normal;
+    line-height: 1.5;
+    border-left: 4px solid #ccc;
+    padding-left: 1.5rem;
+}
+
+
+.grid-item-sidebar .author {
+    position: absolute;
+    right: 0;
+    bottom: 70px;
+
+}
+
+.third-article img {
+    float: left;
+    padding: 0.5rem;
+    margin-left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
