@@ -1,0 +1,26 @@
+body {
+    padding: 2rem;
+}
+
+header {
+   border-bottom: 2px solid rgb(0,0,0);
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul {
+    display: flex;
+    padding-right: 2rem;
+}
+
+header ul li {
+    margin-right: 2rem;
+    list-style: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: rgb(0, 153, 0);
+}
