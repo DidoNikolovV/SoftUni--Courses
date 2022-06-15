@@ -1,0 +1,13 @@
+body {
+    display: flex;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+li {
+    display: flex;
+}
