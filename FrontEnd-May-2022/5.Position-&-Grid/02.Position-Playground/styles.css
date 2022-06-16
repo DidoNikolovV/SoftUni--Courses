@@ -21,6 +21,10 @@
     background-image: linear-gradient(to right top, #845ec2, #c05cb0, #e66599, #fa7a82, #ff9671);
 }
 
+section.card {
+    display: block;
+}
+
 .viewport .card {
     width: 40vw;
     position: absolute;

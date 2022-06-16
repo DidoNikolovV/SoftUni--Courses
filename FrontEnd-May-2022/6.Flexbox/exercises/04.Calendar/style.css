@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+div {
+    display: flex;
+    align-items: center;
+
+    max-width: 65vw;
+}
+
+section {
+    display: flex;
+    align-items: center;
+}
+
+span {
+    border: 1px solid black;
+}
+
+section.week {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.week .week__title {
+    width: 100%;
+    padding: 2rem;
+    /* align-items: baseline; */
+    text-align: center;
+}
+
+section.week .week__day {
+    flex: 1 0 5rem;
+    padding: 2rem 1rem;
+    text-align: center;
+
+}
+
+
+section.notes {
+    flex-direction: column;
+}
+
+
+
+
+
