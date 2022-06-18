@@ -125,5 +125,38 @@ h1, h2, h3, h4 {
     width: 30%;
 }
 
+/* Catalog */
+#catalog .info {
+    width: 45%;
+}
+
+#catalog .info__title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+#catalog .info__text {
+    color: var(--clr-gray-text);
+    margin-bottom: 1.25rem;
+}
+
+#catalog .info__link {
+    color: var(--clr-black);
+    text-decoration: none;
+}
+
+#catalog .section-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#catalog .catalog__img {
+    width: 45%;
+    max-width: 500px;
+}
+
+
+
 
 
