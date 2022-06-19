@@ -2,7 +2,7 @@
 This repository holds projects, homework, exexercises and other assets during my education at SoftUni (2021)
 
 <section>
-  <h2>FrontEnd-May-22<h2>
+  FrontEnd-May-22
   <h3>Projects build in that course<h3>
   <ul>
     <li><a href="https://github.com/DidoNikolovV/SoftUni--Courses/tree/main/FrontEnd-May-2022/5.Position-%26-Grid/mini-project">Mini Project</a></li>
