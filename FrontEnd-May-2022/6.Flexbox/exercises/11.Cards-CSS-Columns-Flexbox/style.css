@@ -1,0 +1,9 @@
+body {
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cards-layout.masonry {
+    width: 33%;
+}
