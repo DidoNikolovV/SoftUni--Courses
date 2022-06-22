@@ -1,0 +1,61 @@
+:root {
+    --clr-lightgreen: hsl(74deg 55% 50%);
+    --clr-gray: hsl(0deg 0% 48%);
+    --clr-lightbackground: #f7f7f7;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.lightgreen {
+    color: var(--clr-lightgreen);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+
+header p {
+    color: var(--clr-gray);
+}
+
+section#about {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    margin-right: 2rem;
+    background-color: var(--clr-lightbackground);
+}
+
+.card img {
+    width: 100%;
+    
+}
+
+.card__info {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+}
+
+.card__desc {
+    color: var(--clr-gray);
+}
+
+.card__button {
+    border: none;
+    border-radius: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    padding: 1rem 2rem;
+    background-color: var(--clr-lightgreen);
+}
