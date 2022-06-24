@@ -9,6 +9,10 @@ p {
     font-family: 'Open Sans', sans-serif;
 }
 
+li {
+    list-style: none;
+}
+
 .logo {
     width: 100px;
     height: 40px;
@@ -187,7 +191,6 @@ section#about {
 }
 
 .about__info--para {
-    color: hsl(240deg 1% 58%);
 }
 
 .about__info--button {
@@ -243,6 +246,39 @@ section#about {
 .contact__data--phone {
     color: #fff;
 }
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__info {
+    font-size: 0.8rem;
+    margin-top: 5rem;
+    margin-right: 2rem;
+    padding: 2rem 5rem;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+}
+
+.footer__info h2 {
+    padding-left: 2rem;
+}
+
+
+.footer__contact li {
+    padding-top: 0.5rem;
+    color: hsl(240deg 1% 58%);
+}   
+
+.footer__info .logo {
+    width: 100px;
+}
+
+
 
 
 
