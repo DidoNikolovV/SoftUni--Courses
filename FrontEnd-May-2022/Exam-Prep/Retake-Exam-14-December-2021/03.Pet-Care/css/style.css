@@ -1,0 +1,208 @@
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.logo {
+    width: 100px;
+    height: 40px;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+header nav ul li {
+    margin-right: 2rem;
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: hsl(218deg 29% 39%);
+    font-weight: bold;
+}
+
+section#hero {
+    position: relative;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+section#hero .hero__background--image{
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100%;;
+}
+.hero__bg {
+    width: 100vw;
+    height: 70vh;
+    position: relative;
+}
+
+.hero__about {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__about--title {
+    color: hsl(0deg 0% 100%);
+    font-size: 3rem;
+    font-weight: 200;
+}
+
+.hero__about--highlight {
+    color: hsl(0deg 0% 100%);
+    
+    font-weight: bold;
+}
+
+.hero__about--para {
+    color: hsl(7deg 84% 90%);
+}
+
+.hero__about--button {
+    border: none;
+    padding: 1rem 2.5rem;
+    margin-top: 2rem;
+    border-radius: 20px;
+    color: hsl(12deg 100% 52%);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.hero__dog {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 70%;
+    height: 70vh;
+}
+
+/* Services */
+.services__title {
+    color: hsl(230deg 46% 13%);
+    text-align: center;
+    margin-top: 8rem;
+    margin-bottom: 0;
+
+}
+
+
+.services__para {
+    color: hsl(240deg 1% 58%);
+    text-align: center;
+    margin-top: 0;
+}
+
+.services__cards {
+    display: flex;
+    justify-content:center;
+    width: 100%;
+}
+
+.services__card {
+    border: 1px solid hsl(5deg 100% 92%);
+    border-radius: 8px;
+    margin-top: 5rem;
+    margin-right: 2rem;
+    padding: 2rem 5rem;
+    width: 150px;
+}
+
+.services__card img {
+    background-color: hsl(12deg 90% 49%);
+    border-radius: 40%;
+    padding: 2rem;
+}
+
+.services__card--para {
+    color: hsl(240deg 1% 58%);
+}
+
+/* About */
+section#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10rem;
+}
+
+.about__img {
+    width: 50%;
+}
+
+.about__img img {
+    float: right;
+}
+
+
+.about__info {
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5rem;
+}
+
+.about__info--desc {
+    width: 50%;
+}
+
+.about__info--title {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+.about__info--subtitle {
+    color: hsl(230deg 46% 13%);
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.about__info--para {
+    color: hsl(240deg 1% 58%);
+}
+
+.about__info--button {
+    border: none;
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    border-radius: 20px;
+    color: #fff;
+    background-color: hsl(12deg 100% 52%);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
