@@ -1,0 +1,132 @@
+:root {
+    --clr-light-gray:#efefef;
+    --clr-dark: #222;
+    --clr-dark-sub: #4c4c4c;
+    --clr-white: #fff;
+    --pad-section: 5rem;
+}
+
+body {
+    padding: var(--pad-section);
+    font-family: 'Raleway', sans-serif;
+    color: var(--clr-dark);
+}
+
+ul {
+    list-style: none;
+}
+
+.section {
+    background-color: var(--clr-light-gray);
+    padding: var(--pad-section);
+    margin-bottom: 2rem;
+}
+
+.default-title {
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+}
+
+.default-title .accent {
+    font-weight: bold;
+}
+
+.default-desc {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.divider {
+    background-color: var(--clr-dark);
+}
+
+.divider.divider--vertical {
+    width: 1px;
+    height: 4rem;
+}
+
+.divider.divider--horizontal {
+    width: 4rem;
+    height: 1px;
+}
+
+#header {
+    display: none;
+}
+
+#hero {
+    position: relative;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero__about {
+    width: 45%;
+}
+
+.hero__desc {
+   font-size: 1.5rem;
+}
+
+.hero__img {
+    position: absolute;
+    bottom: 0px;
+    right: var(--pad-section);
+    width: 45%;
+}
+
+/* Purpose */
+#purpose {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#purpose .title-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#purpose .info {
+    width: 50%;
+}
+
+#purpose .purpose__img {
+    width: 40%;
+    margin-right: 6rem;
+    margin-left: auto;
+}
+
+#purpose .title-wrapper .default-title {
+    margin-bottom: unset;
+    margin-left: 2.5rem;
+}
+
+#purpose .default__desc {
+    margin-bottom: 2rem;
+}
+
+#purpose .socials {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#purpose .socials .social__link {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--clr-dark-sub);
+    color: var(--clr-white);
+    font-size: 1.5rem;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+
+
