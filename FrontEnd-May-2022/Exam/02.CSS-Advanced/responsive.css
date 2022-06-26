@@ -1,0 +1,56 @@
+@media screen and (max-width:600px) {
+    main {
+        width: 100%;
+    }
+
+    .left-to-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .left-to-right:first-child
+    {
+        padding: 0;
+        /* border-radius: 8px; */
+    }
+
+
+    main .left-to-right article {
+        border-radius: 3.5rem;
+        padding: 2rem 1.5rem 0 1.5rem;
+    }
+
+    main :nth-of-type(2) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main :nth-of-type(2) button {
+        display: none;
+    }
+
+    .left-to-right button {
+        display: none;
+    }
+
+    main section.left-to-right:nth-child(3) {
+        padding: 0;
+    }
+
+    main section:nth-child(4) {
+        margin: 40px;
+    }
+
+
+    main section:last-child {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #email {
+      padding-top: 1rem;  
+    }
+    
+}
