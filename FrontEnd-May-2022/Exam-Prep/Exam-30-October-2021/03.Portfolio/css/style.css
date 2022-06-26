@@ -153,5 +153,58 @@ ul {
     z-index: 2;
 }
 
+/* Contacts */
+#contacts .contacts-content {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#contacts .default__desc {
+    margin-bottom: 2.5rem;
+}
+
+#contacts .form {
+    width: 60%;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-areas: 
+    "email subject"
+    "msg msg"
+    "btn btn"
+    ;
+}
+
+#contacts .form .base {
+    border: 1px solid var(--clr-dark);
+    padding: 0.5rem
+}
+
+#contacts .form .email {
+    grid-area: email;
+   
+}
+
+#contacts .form .subject {
+    grid-area: subject;
+   
+}
+
+#contacts .form .message {
+    grid-area: msg;
+   
+}
+
+#contacts .form .btn {
+    grid-area: btn;
+   
+    background-color: var(--clr-dark);
+    color: var(--clr-white);
+    text-transform: uppercase;
+  
+}
+
+
 
 
