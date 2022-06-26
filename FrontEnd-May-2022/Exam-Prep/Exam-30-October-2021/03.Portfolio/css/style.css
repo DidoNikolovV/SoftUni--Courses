@@ -178,7 +178,8 @@ ul {
 
 #contacts .form .base {
     border: 1px solid var(--clr-dark);
-    padding: 0.5rem
+    padding: 0.5rem;
+    background-color: transparent;
 }
 
 #contacts .form .email {

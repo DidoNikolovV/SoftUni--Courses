@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 3rem 5rem;
+    padding: 5rem;
+}
+
+.lightgray {
+    color: hsl(0deg 0% 38%);
+}
+
+.award-light {
+    color: hsl(0 1% 46% / 1);
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+section#about {
+    display: flex;
+}
+
+
+.about__info {
+    width: 50%;
+    margin-right: 2rem;
+}
+
+.about__title {
+    padding-bottom: 2rem;
+    font-weight: 500;
+}
+
+.about__desc {
+    padding-bottom: 1.5rem;
+}
+
+.side__img {
+    width: 45%;
+    object-fit: cover;
+}
+
+.about__awards {
+    margin-top: 2rem;
+}
+
+.about__award {
+    display: flex;
+}
+
+.about__award img {
+    width: 75px;
+    margin-right: 0.5rem;
+}
+
+.about__award--info {
+    margin: auto 0;
+}
+
+
+
+
+
