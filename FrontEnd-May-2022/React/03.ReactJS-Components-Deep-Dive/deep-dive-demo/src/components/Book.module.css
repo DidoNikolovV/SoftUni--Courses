@@ -1,0 +1,11 @@
+.book-item {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+article {
+    background-color: aqua;
+}
+
+.author {
+    display: block;
+}
