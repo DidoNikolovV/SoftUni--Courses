@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import useFetch from './hooks/useFetch';
 
 import TaskList from './components/TaskList';
 import CreateTask from './components/CreateTask';
@@ -6,11 +6,20 @@ import CreateTask from './components/CreateTask';
 import styles from './App.module.css';
 
 function App() {
-  const [tasks, setTasks] = useState([
-    { _id: 1, title: 'first' },
-    { _id: 2, title: 'second' },
-    { _id: 3, title: 'third' },
-  ]);
+  // const [tasks, setTasks] = useState([]);
+
+  // useEffect(() => {
+  //   fetch('http://localhost:3030/jsonstore/todos')
+  //     .then((res) => res.json())
+  //     .then((result) => {
+  //       setTasks(Object.values(result));
+  //     });
+  // }, []);
+
+  const [tasks, setTasks] = useFetch(
+    'http://localhost:3030/jsonstore/todos',
+    []
+  );
 
   const taskCreateHandler = (newTask) => {
     setTasks((state) => [
