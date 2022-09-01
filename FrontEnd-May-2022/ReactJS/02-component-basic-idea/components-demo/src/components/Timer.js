@@ -1,9 +1,11 @@
 import { useState } from 'react';
 
 export const Timer = (props) => {
-    const [time, setTime] = useState(0);
+    const [time, setTime] = useState(props.state);
     setTimeout(() => {
-        setTime(time + 1);
+        if (time < 100) {
+            setTime(time + 1);
+        }
     }, 1000);
 
     return (
