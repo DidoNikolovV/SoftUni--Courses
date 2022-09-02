@@ -1,7 +1,7 @@
 import './App.css';
 import { Header } from './components/Header';
 import { BookList } from './components/BookList';
-import { Clicker } from './components/Clicker';
+import { Counter } from './components/Counter';
 
 function App() {
 
@@ -18,7 +18,7 @@ function App() {
 			<Header>
 				<span class="fancy-font">Book</span> Library
 			</Header>
-			<Clicker />
+			<Counter />
 			<BookList books={books}></BookList>
 
 		</div>
