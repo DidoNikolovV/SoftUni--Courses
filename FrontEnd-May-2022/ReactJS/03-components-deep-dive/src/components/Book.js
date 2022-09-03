@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
+import styles from './Book.module.css';
 
 export const Book = (props) => {
     const [highlighted, setHighlighted] = useState(false);
-    const [marked, setMarked] = useState(false);
+    const [deleted, setDeleted] = useState(false);
 
     useEffect(() => {
         console.log('Mounting: ' + props.title);
@@ -11,14 +12,14 @@ export const Book = (props) => {
 
     useEffect(() => {
         console.log('Updating: ' + props.title);
-    }, [highlighted, marked]);
+    }, [highlighted, deleted]);
 
     const clickHandler = () => {
         setHighlighted(state => !state);
     };
 
     const deleteHandler = () => {
-        setMarked(true);
+        setDeleted(true);
     };
 
     let style = {};
@@ -26,12 +27,14 @@ export const Book = (props) => {
         style.backgroundColor = 'green';
     }
 
-    if (marked) {
-        style.backgroundColor = 'red';
+    if (deleted) {
+        return <h2>Deleted</h2>;
     }
 
+
+
     return (
-        <li style={style}>
+        <li style={style} className={styles['book-item']}>
             <article>
                 <h2>{props.title}</h2>
                 <div>Price: {props.price}</div>
@@ -39,7 +42,7 @@ export const Book = (props) => {
                 <footer>
                     <button onClick={clickHandler}>Highlight</button>
                     <button onClick={deleteHandler}>Delete</button>
-                    <span>Author: {props.author}</span>
+                    <span className={styles.author}>Author: {props.author}</span>
                 </footer>
             </article>
         </li>
