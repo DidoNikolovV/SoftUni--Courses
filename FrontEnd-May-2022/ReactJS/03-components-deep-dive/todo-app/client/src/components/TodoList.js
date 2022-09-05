@@ -12,10 +12,18 @@ export const TodoList = () => {
             });
     }, []);
 
-    const todoClickHandler = (todoId) => {
-        setTodos(state => state.map(x => x._id == todoId ? { ...x, isCompleted: !x.isCompleted } : x)
+    const todoClickHandler = (todo) => {
+        fetch(`http://localhost:3030/jsonstore/todos/${todo._id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ ...todo, isCompleted: !todo.isCompleted })
+        }).then(res => res.json())
+            .then(modifiedTodo => {
+                setTodos(oldTodos => oldTodos.map(todo => todo._id === modifiedTodo._id ? modifiedTodo : todo));
 
-        )
+            });
     };
 
     return (
