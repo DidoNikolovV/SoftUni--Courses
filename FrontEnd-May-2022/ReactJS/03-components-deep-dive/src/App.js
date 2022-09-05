@@ -1,7 +1,10 @@
 import { BookList } from './components/BookList';
 import './App.css';
+import { CharacterList } from './components/CharacterList';
 
 function App() {
+
+
 	const books = [
 		{ "title": "Northanger Abbey", "author": "Austen, Jane", "year": 1814, "edition": "Penguin", "price": 18.2 },
 		{ "title": "War and Peace", "author": "Tolstoy, Leo", "year": 1865, "edition": "Penguin", "price": 12.7 },
@@ -10,9 +13,13 @@ function App() {
 		{ "title": "The Hours", "author": "Cunnningham, Michael", "year": 1999, "edition": "Harcourt Brace", "price": 12.35 },
 	];
 
+
+
 	return (
 		<div className="App">
 			<header className="App-header">
+				<CharacterList />
+
 				<BookList books={books} />
 			</header>
 		</div>
