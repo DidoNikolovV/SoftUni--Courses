@@ -7,7 +7,7 @@ export const TodoItem = (props) => {
     }
     return (
         <tr className={className}>
-            <td>{props.title}</td>
+            <td>{props.text}</td>
             <td>{props.isCompleted ? 'Complete' : 'Incomplete'}</td>
             <td className="todo-action">
                 <button className="btn todo-btn">Change status</button>

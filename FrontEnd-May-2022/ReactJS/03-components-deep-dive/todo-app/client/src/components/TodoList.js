@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { TodoItem } from "./TodoItem";
 
 export const TodoList = () => {
     const [todos, setTodos] = useState([]);
@@ -7,7 +8,7 @@ export const TodoList = () => {
         fetch('http://localhost:3030/jsonstore/todos')
             .then(res => res.json())
             .then(result => {
-                setTodos(result);
+                setTodos(Object.values(result));
             });
     }, []);
 
@@ -21,7 +22,7 @@ export const TodoList = () => {
                 </tr>
             </thead>
             <tbody>
-
+                {todos.map(todo => <TodoItem key={todo._id} {...todo} />)}
             </tbody>
         </table>
 
