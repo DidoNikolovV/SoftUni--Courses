@@ -10,7 +10,7 @@ export const TodoItem = (props) => {
             <td>{props.text}</td>
             <td>{props.isCompleted ? 'Complete' : 'Incomplete'}</td>
             <td className="todo-action">
-                <button className="btn todo-btn">Change status</button>
+                <button onClick={() => props.onClick(props._id)} className="btn todo-btn">Change status</button>
             </td>
         </tr>
 

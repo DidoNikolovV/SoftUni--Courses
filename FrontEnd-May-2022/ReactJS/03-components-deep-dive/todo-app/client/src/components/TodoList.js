@@ -12,6 +12,12 @@ export const TodoList = () => {
             });
     }, []);
 
+    const todoClickHandler = (todoId) => {
+        setTodos(state => state.map(x => x._id == todoId ? { ...x, isCompleted: !x.isCompleted } : x)
+
+        )
+    };
+
     return (
         <table className="table">
             <thead>
@@ -22,7 +28,7 @@ export const TodoList = () => {
                 </tr>
             </thead>
             <tbody>
-                {todos.map(todo => <TodoItem key={todo._id} {...todo} />)}
+                {todos.map(todo => <TodoItem key={todo._id} {...todo} onClick={todoClickHandler} />)}
             </tbody>
         </table>
 
