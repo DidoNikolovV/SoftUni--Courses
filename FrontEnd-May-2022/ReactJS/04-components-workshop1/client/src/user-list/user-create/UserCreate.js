@@ -1,7 +1,7 @@
 
-export const UserEdit = ({
-    user,
+export const UserCreate = ({
     onClose,
+    onUserCreate,
 }) => {
     return (
         <div className="overlay">
@@ -9,7 +9,7 @@ export const UserEdit = ({
             <div className="modal">
                 <div className="user-container">
                     <header className="headers">
-                        <h2>Edit User</h2>
+                        <h2>Add User</h2>
                         <button className="btn close" onClick={onClose}>
                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark"
                                 className="svg-inline--fa fa-xmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
@@ -19,13 +19,13 @@ export const UserEdit = ({
                             </svg>
                         </button>
                     </header>
-                    <form>
+                    <form onSubmit={onUserCreate}>
                         <div className="form-row">
                             <div className="form-group">
                                 <label htmlFor="firstName">First name</label>
                                 <div className="input-wrapper">
                                     <span><i className="fa-solid fa-user"></i></span>
-                                    <input id="firstName" name="firstName" type="text" value={user.firstName} />
+                                    <input id="firstName" name="firstName" type="text" />
                                 </div>
                                 <p className="form-error">
                                     First name should be at least 3 characters long!
@@ -35,7 +35,7 @@ export const UserEdit = ({
                                 <label htmlFor="lastName">Last name</label>
                                 <div className="input-wrapper">
                                     <span><i className="fa-solid fa-user"></i></span>
-                                    <input id="lastName" name="lastName" type="text" value={user.lastName} />
+                                    <input id="lastName" name="lastName" type="text" />
                                 </div>
                                 <p className="form-error">
                                     Last name should be at least 3 characters long!
@@ -48,7 +48,7 @@ export const UserEdit = ({
                                 <label htmlFor="email">Email</label>
                                 <div className="input-wrapper">
                                     <span><i className="fa-solid fa-envelope"></i></span>
-                                    <input id="email" name="email" type="text" value={user.email} />
+                                    <input id="email" name="email" type="text" />
                                 </div>
                                 <p className="form-error">Email is not valid!</p>
                             </div>
@@ -56,7 +56,7 @@ export const UserEdit = ({
                                 <label htmlFor="phoneNumber">Phone number</label>
                                 <div className="input-wrapper">
                                     <span><i className="fa-solid fa-phone"></i></span>
-                                    <input id="phoneNumber" name="phoneNumber" type="text" value={user.phoneNumber} />
+                                    <input id="phoneNumber" name="phoneNumber" type="text" />
                                 </div>
                                 <p className="form-error">Phone number is not valid!</p>
                             </div>
@@ -66,7 +66,7 @@ export const UserEdit = ({
                             <label htmlFor="imageUrl">Image Url</label>
                             <div className="input-wrapper">
                                 <span><i className="fa-solid fa-image"></i></span>
-                                <input id="imageUrl" name="imageUrl" type="text" value={user.imageUrl} />
+                                <input id="imageUrl" name="imageUrl" type="text" />
                             </div>
                             <p className="form-error">ImageUrl is not valid!</p>
                         </div>
@@ -76,7 +76,7 @@ export const UserEdit = ({
                                 <label htmlFor="country">Country</label>
                                 <div className="input-wrapper">
                                     <span><i className="fa-solid fa-map"></i></span>
-                                    <input id="country" name="country" type="text" value={user.country} />
+                                    <input id="country" name="country" type="text" />
                                 </div>
                                 <p className="form-error">
                                     Country should be at least 2 characters long!
@@ -86,7 +86,7 @@ export const UserEdit = ({
                                 <label htmlFor="city">City</label>
                                 <div className="input-wrapper">
                                     <span><i className="fa-solid fa-city"></i></span>
-                                    <input id="city" name="city" type="text" value={user.city} />
+                                    <input id="city" name="city" type="text" />
                                 </div>
                                 <p className="form-error">
                                     City should be at least 3 characters long!
@@ -99,7 +99,7 @@ export const UserEdit = ({
                                 <label htmlFor="street">Street</label>
                                 <div className="input-wrapper">
                                     <span><i className="fa-solid fa-map"></i></span>
-                                    <input id="street" name="street" type="text" value={user.address.street} />
+                                    <input id="street" name="street" type="text" />
                                 </div>
                                 <p className="form-error">
                                     Street should be at least 3 characters long!
@@ -109,7 +109,7 @@ export const UserEdit = ({
                                 <label htmlFor="streetNumber">Street number</label>
                                 <div className="input-wrapper">
                                     <span><i className="fa-solid fa-house-chimney"></i></span>
-                                    <input id="streetNumber" name="streetNumber" type="text" value={user.streetNumber} />
+                                    <input id="streetNumber" name="streetNumber" type="text" />
                                 </div>
                                 <p className="form-error">
                                     Street number should be a positive number!
