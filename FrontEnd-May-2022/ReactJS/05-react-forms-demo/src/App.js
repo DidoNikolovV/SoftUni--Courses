@@ -10,6 +10,8 @@ function App() {
 		gender: '',
 		userType: 'corporate',
 		tac: false,
+		egn: '',
+		eik: '',
 	});
 
 	const changeHandler = (e) => {
@@ -80,12 +82,21 @@ function App() {
 					</div>
 
 					<div>
+						<label htmlFor="identifier">{values.userType == 'individual' ? 'EGN' : 'EIK'}</label>
+
+						{values.userType === 'individual'
+							? <input type='text' id="identifier" name="egn" value={values.egn} onChange={changeHandler} />
+							: <input type="text" id="identifier" name="eik" value={values.eik} onChange={changeHandler} />
+						}
+					</div>
+
+					<div>
 						<label htmlFor="tac">Terms and Conditions: </label>
 						<input type="checkbox" id="tac" name="tac" checked={values.tac} onChange={changeHandler} />
 					</div>
 
 					<div>
-						<input type="submit" value="Login" />
+						<input type="submit" value="Register" disabled={!values.tac} />
 					</div>
 
 				</form>
