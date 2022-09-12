@@ -16,15 +16,8 @@ function App() {
 
 		setValues(state => ({
 			...state,
-			[e.target.name]: e.target.value
-		}));
-	};
+			[e.target.name]: e.target.type == 'checkbox' ? e.target.checked : e.target.value
 
-	const checkboxChangeHandler = (e) => {
-
-		setValues(state => ({
-			...state,
-			[e.target.name]: !state[e.target.name]
 		}));
 	};
 
@@ -88,7 +81,7 @@ function App() {
 
 					<div>
 						<label htmlFor="tac">Terms and Conditions: </label>
-						<input type="checkbox" id="tac" name="tac" checked={values.tac} onChange={checkboxChangeHandler} />
+						<input type="checkbox" id="tac" name="tac" checked={values.tac} onChange={changeHandler} />
 					</div>
 
 					<div>
