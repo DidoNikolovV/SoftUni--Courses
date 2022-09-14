@@ -1,7 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './App.css';
 
 function App() {
+	const infoRef = useRef();
+
 	const [values, setValues] = useState({
 		username: '',
 		password: '',
@@ -13,6 +15,12 @@ function App() {
 		egn: '',
 		eik: '',
 	});
+
+	useEffect(() => {
+		if (values.username && values.age) {
+			infoRef.current.value = `${values.username} - ${values.age}`;
+		}
+	}, [values.username, values.age]);
 
 	const changeHandler = (e) => {
 
@@ -98,6 +106,9 @@ function App() {
 					<div>
 						<input type="submit" value="Register" disabled={!values.tac} />
 					</div>
+
+					<label htmlFor="uncontrolled-input">Uncontrolled Input</label>
+					<input type="text" name="uncontrolled" id="uncontrolled-input" ref={infoRef} />
 
 				</form>
 			</header>
