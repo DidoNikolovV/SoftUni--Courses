@@ -51,6 +51,8 @@ export const UserCreate = ({
 
     };
 
+    const isFormValid = !Object.values(errors).some(x => x);
+
     return (
         <div className="overlay">
             <div className="backdrop" onClick={onClose}></div>
@@ -138,7 +140,7 @@ export const UserCreate = ({
                                 <label htmlFor="country">Country</label>
                                 <div className="input-wrapper">
                                     <span><i className="fa-solid fa-map"></i></span>
-                                    <input id="country" name="country" type="text" onBlur={(e) => minLength(e, 2)} />
+                                    <input id="country" name="country" type="text" value={values.country} onChange={changeHandler} onBlur={(e) => minLength(e, 2)} />
                                 </div>
                                 {errors.country &&
                                     <p className="form-error">
@@ -187,7 +189,7 @@ export const UserCreate = ({
                             </div>
                         </div>
                         <div id="form-actions">
-                            <button id="action-save" className="btn" type="submit">Save</button>
+                            <button id="action-save" className="btn" type="submit" disabled={!isFormValid}>Save</button>
                             <button
                                 id="action-cancel"
                                 className="btn"

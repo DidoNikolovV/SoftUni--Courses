@@ -52,6 +52,8 @@ export const UserList = () => {
                     user
                 ]);
                 closeHandler();
+            })
+            .catch(err => {
 
             });
     };
