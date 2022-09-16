@@ -1,16 +1,20 @@
 import { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 
 export const Products = () => {
     const [starship, setStarship] = useState({});
     const { productId } = useParams();
     const navigate = useNavigate();
+    const location = useLocation();
 
     useEffect(() => {
         fetch(`https://swapi.dev/api/starships/${productId}/`)
             .then(res => res.json())
             .then(result => {
                 setStarship(result);
+            })
+            .catch(() => {
+                navigate('/not-found');
             });
     }, [productId]);
 
