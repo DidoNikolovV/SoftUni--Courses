@@ -4,17 +4,25 @@ import { Home } from './components/Home';
 import { Pricing } from './components/Pricing';
 import { About } from './components/About';
 import { Contacts } from './components/Contacts';
+import { NotFound } from './components/NotFound';
+import { Navigation } from './components/Navigation';
+import { Products } from './components/Products';
 
 function App() {
 	return (
 		<div className="App">
 			<h1>Hello React Router</h1>
+			<Navigation />
 
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/about" element={<About />} />
-				<Route path="/pricing" element={<Pricing />} />
+				<Route path="/pricing/*" element={<Pricing />} />
+				<Route path="/pricing/premium" element={<h2>Premium Pricing</h2>} />
 				<Route path="/contacts" element={<Contacts />} />
+				<Route path="/products/:productId" element={<Products />} />
+				<Route path="/*" element={<NotFound />} />
+
 			</Routes>
 		</div>
 	);
