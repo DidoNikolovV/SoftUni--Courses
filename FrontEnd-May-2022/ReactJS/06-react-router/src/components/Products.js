@@ -19,6 +19,7 @@ export const Products = () => {
         navigate(`/products/${Number(productId) + 1}`);
     };
 
+
     return (
         <>
             <h2>Products Page</h2>
